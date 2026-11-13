@@ -25,7 +25,7 @@ public class CartaoCredito implements Pagamento {
         //Parcelas até 4x sem juros
         if (parcelas <= 4) {
             double valorParcela = valor/parcelas;
-            System.out.printf("%d de R$%.2f (sem juros)", parcelas, valorParcela);
+            System.out.printf("%dx de R$%.2f (sem juros)", parcelas, valorParcela);
             return valor;
         }
 
@@ -36,7 +36,7 @@ public class CartaoCredito implements Pagamento {
 
             double valorParcela = totalComJuros / parcelas;
 
-            System.out.printf("%dx de R$%.2f (sem juros)", parcelas, valorParcela);
+            System.out.printf("%dx de R$%.2f (com juros)", parcelas, valorParcela);
             return totalComJuros;
         }
 
