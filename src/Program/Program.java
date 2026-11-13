@@ -77,7 +77,7 @@ public class Program {
                       if (escolha == -1) {
                           adicionando = false;
                       }
-                      if (escolha >= 0 && escolha < catalogo.size()) {
+                      else if (escolha >= 0 && escolha < catalogo.size()) {
                           Produto escolhido = catalogo.get(escolha);
                           cc.adicionarProduto(escolhido);
                           System.out.println("Produto adicionado ao carrinho com sucesso!\n");
